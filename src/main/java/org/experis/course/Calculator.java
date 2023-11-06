@@ -16,19 +16,22 @@ public class Calculator {
     }
 
     // METODI
-    public float addNumber(float firstNumber, float secondNumber) {
+    public static float addNumber(float firstNumber, float secondNumber) {
         return firstNumber + secondNumber;
     }
 
-    public float subtractNumber(float firstNumber, float secondNumber) {
+    public static float subtractNumber(float firstNumber, float secondNumber) {
         return firstNumber - secondNumber;
     }
 
-    public float divideNumber(float firstNumber, float secondNumber) {
+    public static float divideNumber(float firstNumber, float secondNumber) {
+        if (secondNumber == 0) {
+            throw new IllegalArgumentException("The dividend cannot be 0!");
+        }
         return firstNumber / secondNumber;
     }
 
-    public float multiplyNumber(float firstNumber, float secondNumber) {
+    public static float multiplyNumber(float firstNumber, float secondNumber) {
         return firstNumber * secondNumber;
     }
 }
